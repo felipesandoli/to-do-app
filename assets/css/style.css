@@ -41,6 +41,26 @@ header {
     background-color: white;
     border: 1px solid #36454F;
     border-radius: 5px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+#new-task {
+    height: 30px;
+    width: 200px;
+    letter-spacing: 1.5px;
+    background-image: linear-gradient(white, rgba(54, 69, 79, 0.5));
+    border: 1px solid #36454f;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 15px;
+    color: #36454F;
+    font-weight: 600;
+}
+
+#new-task:hover {
+    background-image: linear-gradient(rgba(54, 69, 79, 0.5), white);
 }
 
 footer {
