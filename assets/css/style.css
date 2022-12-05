@@ -6,4 +6,21 @@ html {
 body {
     margin: 0;
     padding: 0;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 600;
+}
+
+header {
+    height: 50px;
+    width: 100%;
+    background-color: #36454F;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 150%;
+    text-decoration: none;
+    padding-left: 15px;
 }
