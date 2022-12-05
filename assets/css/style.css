@@ -26,6 +26,23 @@ header {
     padding-left: 15px;
 }
 
+/* application area */
+.to-do-app {
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.task-container {
+    width: 80%;
+    height: 80%;
+    background-color: white;
+    border: 1px solid #36454F;
+    border-radius: 5px;
+}
+
 footer {
     height: 75px;
     width: 100%;
