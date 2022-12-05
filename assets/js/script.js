@@ -4,15 +4,15 @@ let tasks = [];
 document.addEventListener("DOMContentLoaded", function() {
     let button = document.getElementById("new-task");
     console.log(button);
-    button.addEventListener("click", createNewTask);
+    button.addEventListener("click", displayTaskTemplate);
 })
 
-function createNewTask() {
+function displayTaskTemplate() {
     
 }
 
-function displayTaskTemplate() {
-
+function createNewTask() {
+    
 }
 
 function displayTasks() {
