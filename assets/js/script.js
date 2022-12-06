@@ -6,6 +6,10 @@ document.addEventListener("DOMContentLoaded", function() {
     button.addEventListener("click", displayTaskTemplate);
 })
 
+/**
+ *  Displays a template to be completed for creating a new task. Template contains
+ *  a button to create the task after the template has been completed.
+ */
 function displayTaskTemplate() {
     let taskTemplate = document.createElement("div");
     taskTemplate.innerHTML = `
@@ -20,6 +24,9 @@ function displayTaskTemplate() {
     button.addEventListener("click", createNewTask);
 }
 
+/**
+ *  Creates the task and add it to the list of tasks. Refresh the displayed tasks after addition.
+ */
 function createNewTask() {
     let taskTemplate = document.getElementsByClassName("taskTemplate")[0];
     let task = taskTemplate.children[0].value;
