@@ -35,8 +35,6 @@ function createNewTask() {
         status: "to do"
     });
     taskTemplate.remove();
-    // Clear all tasks before displaying again, so there are no duplicate tasks
-    clearAllTasks();
     displayTasks();
 }
 
@@ -45,6 +43,8 @@ function createNewTask() {
  *  according to the status
  */
 function displayTasks() {
+    // Clear all tasks before displaying again, so there are no duplicate tasks
+    clearAllTasks();
     for (let taskIterator of taskList) {
         let task = document.createElement("div");
         task.innerHTML = `
