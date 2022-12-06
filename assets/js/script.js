@@ -1,4 +1,4 @@
-let tasks = [];
+let taskList = [];
 
 // Event Listener for the DOM to be loaded, as done in Love Maths walkthrough project
 document.addEventListener("DOMContentLoaded", function() {
@@ -30,16 +30,32 @@ function displayTaskTemplate() {
 function createNewTask() {
     let taskTemplate = document.getElementsByClassName("taskTemplate")[0];
     let task = taskTemplate.children[0].value;
-    tasks.push({
+    taskList.push({
         content : task,
-        status: "to-do"
+        status: "to do"
     });
     taskTemplate.remove();
     displayTasks();
 }
 
 function displayTasks() {
-
+    for (let taskIterator of taskList) {
+        let task = document.createElement("div");
+        task.innerHTML = `
+            <p>${taskIterator.content}</p>
+        `;
+        task.classList.add("task");
+        if (taskIterator.status === "to do") {
+            let toDo = document.getElementById("to-do");
+            toDo.appendChild(task);
+        } else if (taskIterator.status === "in progress") {
+            let inProgress = document.getElementById("in-progress");
+            inProgress.appendChild(task);
+        } else if (taskIterator.status === "completed") {
+            let completed = document.getElementById("completed");
+            completed.appendChild(task);
+        }
+    }
 }
 
 function setTaskInProgress() {
