@@ -10,11 +10,14 @@ function displayTaskTemplate() {
     let taskTemplate = document.createElement("div");
     taskTemplate.innerHTML = `
         <input type="text" required></input>
-        <button>Create</button>
+        <button id="create-confirm">Create</button>
     `;
     taskTemplate.classList.add("taskTemplate");
     let toDo = document.getElementById("to-do");
     toDo.appendChild(taskTemplate);
+
+    let button = document.getElementById("create-confirm");
+    button.addEventListener("click", createNewTask);
 }
 
 function createNewTask() {
