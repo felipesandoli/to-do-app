@@ -35,6 +35,8 @@ function createNewTask() {
         status: "to do"
     });
     taskTemplate.remove();
+    // Clear all tasks before displaying again, so there are no duplicate tasks
+    clearAllTasks();
     displayTasks();
 }
 
@@ -59,6 +61,16 @@ function displayTasks() {
             let completed = document.getElementById("completed");
             completed.appendChild(task);
         }
+    }
+}
+
+/**
+ *  Clear all tasks currentky beeing displayed
+ */
+function clearAllTasks() {
+    let taskContainers = document.getElementsByClassName("task-container");
+    for (let taskContainer of taskContainers) {
+        taskContainer.innerHTML = "";
     }
 }
 
