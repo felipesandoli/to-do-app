@@ -31,7 +31,8 @@ function createNewTask() {
     let taskTemplate = document.getElementsByClassName("taskTemplate")[0];
     let task = taskTemplate.children[0].value;
     tasks.push({
-        content : task
+        content : task,
+        status: "to-do"
     });
     taskTemplate.remove();
     displayTasks();
