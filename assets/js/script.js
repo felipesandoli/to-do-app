@@ -38,6 +38,10 @@ function createNewTask() {
     displayTasks();
 }
 
+/**
+ *  Iterates over list of tasks and displays them in the correct section 
+ *  according to the status
+ */
 function displayTasks() {
     for (let taskIterator of taskList) {
         let task = document.createElement("div");
