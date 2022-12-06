@@ -2,7 +2,7 @@ let taskList = [];
 
 // Event Listener for the DOM to be loaded, as done in Love Maths walkthrough project
 document.addEventListener("DOMContentLoaded", function() {
-    let button = document.getElementById("new-task");
+    let button = document.getElementById("new-task-btn");
     button.addEventListener("click", displayTaskTemplate);
 })
 
